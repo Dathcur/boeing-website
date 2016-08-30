@@ -1,7 +1,7 @@
 var gulp = require('gulp'),
     awspublish = require('gulp-awspublish'),
     fs = require('fs'),
-    awsCredentials = JSON.parse(fs.readFileSync('./aws.json')),
+    //awsCredentials = JSON.parse(fs.readFileSync('./aws.json')),
     publisher,
     browserSync = require('browser-sync').create(),
     connect = require('gulp-connect'),
