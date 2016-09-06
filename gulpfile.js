@@ -36,6 +36,10 @@ gulp.task('html', function() {
         .pipe(gulp.dest('www/'));
 });
  
+gulp.task('js', function(){
+       gulp.src('src/**/*.js')
+        .pipe(gulp.dest('www/'));    
+}) 
 gulp.task('css', function() {
     return gulp.src('./src/assets/css/main.css')
         .pipe(cssnano())
@@ -52,7 +56,7 @@ gulp.task('images', function(cb) {
 
 
 
-gulp.task('build', ['html','css', 'images']);
+gulp.task('build', ['html','css', 'js', 'images']);
 
 // Publish
 gulp.task('publish', ['build'], function () {
